@@ -2,19 +2,19 @@
 	"autorun": true,
 	"terminals": [
 		{
-			"name": "package-template",
+			"name": "playbooks-html",
 			"focus": true,
 			"execute": false,
 			"command": "npm start"
 		},
 		{
-			"name": "package-template-alt",
+			"name": "playbooks-html-alt",
 			"focus": true,
 			"execute": false,
 			"command": "npm link"
 		},
     {
-			"name": "package-template-docs",
+			"name": "playbooks-html-docs",
 			"open": true,
       "command": "npm run docs:start"
 		},
