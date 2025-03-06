@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src",
-    "rootDir": "./src",
+    "baseUrl": "src",
+    "rootDir": ".",
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "Node",
@@ -23,12 +23,12 @@
     "noUnusedParameters": false,
     "noImplicitReturns": false,
     "forceConsistentCasingInFileNames": true,
-    "paths": {
-      "src/*": ["./src/*"],
-      "tests/*": ["./tests/*"]
-    }
+    // "paths": {
+    //   "src/*": ["./src/*"],
+    //   "tests/*": ["./tests/*"]
+    // }
   },
-  "include": ["src", "tests", "types"],
+  "include": ["src"],
   "exclude": ["node_modules"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
