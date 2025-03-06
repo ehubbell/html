@@ -1,6 +1,6 @@
 {
   "name": "@playbooks/html",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A Tailwind-powered HTML library.",
   "homepage": "https://github.com/playbooks-xyz/html",
   "license": "ISC",
