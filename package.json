@@ -1,8 +1,10 @@
 {
-  "name": "react-vite-ts-package-template",
-  "version": "1.0.0",
-  "description": "A React / Vite package template",
+  "name": "@playbooks/html-elements",
+  "version": "0.0.0",
+  "description": "A Tailwind-powered HTML Element library.",
+  "homepage": "https://github.com/playbooks-xyz/html-elements",
   "license": "ISC",
+  "private": true,
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
