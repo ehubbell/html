@@ -1,8 +1,8 @@
 {
-  "name": "@playbooks/html-elements",
+  "name": "@playbooks/html",
   "version": "0.0.1",
-  "description": "A Tailwind-powered HTML Element library.",
-  "homepage": "https://github.com/playbooks-xyz/html-elements",
+  "description": "A Tailwind-powered HTML library.",
+  "homepage": "https://github.com/playbooks-xyz/html",
   "license": "ISC",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
