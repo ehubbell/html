@@ -1,12 +1,24 @@
 {
-  "name": "@playbooks/html",
+  "name": "@ehubbell/html",
   "version": "0.0.3",
   "description": "A Tailwind-powered HTML library.",
-  "homepage": "https://github.com/playbooks-xyz/html",
+  "homepage": "https://github.com/ehubbell/html",
   "license": "ISC",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
+  "author": {
+    "name": "Eric Hubbell",
+    "email": "eric@erichubbell.com",
+    "url": "https://github.com/ehubbell"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ehubbell/html.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ehubbell/html/issues"
+  },
   "files": [
     "dist"
   ],
@@ -18,6 +30,9 @@
     "format": "prettier src",
     "format:fix": "prettier --write src",
     "clean": "npm run lint:fix && npm run format:fix",
+    "commit": "scripts/commit.sh",
+    "deploy": "scripts/deploy.sh",
+    "git": "git push --tags",
     "test": "jest",
     "prepare": "husky"
   },
@@ -53,6 +68,7 @@
     "vite-plugin-dts": "^4.5.0"
   },
   "dependencies": {
-    "accounting": "^0.4.1"
+    "accounting": "^0.4.1",
+    "react-html-props": "^2.0.10"
   }
 }

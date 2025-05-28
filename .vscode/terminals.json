@@ -14,11 +14,6 @@
 			"command": "npm link"
 		},
     {
-			"name": "playbooks-html-docs",
-			"open": true,
-      "command": "npm run docs:start"
-		},
-    {
 			"name": "misc",
 			"open": true,
       "command": ""

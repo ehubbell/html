@@ -22,7 +22,7 @@ export default defineConfig({
 		sourcemap: true,
 		lib: {
 			entry: path.resolve(__dirname, 'src/index.tsx'),
-			name: 'PlaybooksHtml',
+			name: 'HTML',
 			formats: ['es', 'cjs', 'umd', 'iife'],
 			fileName: format => `index.${format}.js`,
 		},
