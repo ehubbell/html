@@ -1,5 +1,5 @@
 # Overview
- An HTML component library for Tailwind rollups.
+ An HTML component library with Tailwind rollups.
 
  ## Description
  This library provides a wrapper around core HTML5 elements so you can pass in a `tailwind` property.

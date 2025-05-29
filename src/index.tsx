@@ -1,4 +1,4 @@
-import { LibType, MeterProps, OutputProps, RHP } from 'types';
+import { LibType, RHP } from 'types';
 import { classBuilder } from 'utils';
 
 export const A = ({ name = 'A', tailwind, className, ...props }: RHP.AProps & LibType) => {
@@ -364,7 +364,7 @@ export const Meta = ({ name = 'Meta', tailwind, className, ...props }: RHP.MetaP
 	return <meta data-name={name} className={classes} {...props} />;
 };
 
-export const Meter = ({ name = 'Meter', tailwind, className, ...props }: MeterProps & LibType) => {
+export const Meter = ({ name = 'Meter', tailwind, className, ...props }: RHP.MeterProps & LibType) => {
 	const base = {};
 	const classes = classBuilder({ ...base, ...tailwind, className });
 	return <meter data-name={name} className={classes} {...props} />;
@@ -406,7 +406,7 @@ export const Option = ({ name = 'Option', tailwind, className, ...props }: RHP.O
 	return <option data-name={name} className={classes} {...props} />;
 };
 
-export const Output = ({ name = 'Output', tailwind, className, ...props }: OutputProps & LibType) => {
+export const Output = ({ name = 'Output', tailwind, className, ...props }: RHP.OutputProps & LibType) => {
 	const base = {};
 	const classes = classBuilder({ ...base, ...tailwind, className });
 	return <output data-name={name} className={classes} {...props} />;
