@@ -19,47 +19,21 @@
 ```tsx
 import { Button, classBuilder } from '@ehubbell/tailwind-html';
 
-// Option 1 - simple, inline setup. Let library perform rollup.
 const Btn = ({ type, onClick, tailwind, className }) => (
   <Button
     type={type}
     onClick={onClick}
-    tailwind={{ bgColor: 'bg-blue-500', color: 'text-gray-700 dark:text-gray-300', fontSize: 'text-sm', spacing: 'px-3 py-1.5', ...tailwind }}
+    tailwind={{
+      bgColor: 'bg-blue-500',
+      color: 'text-gray-700 dark:text-gray-300',
+      fontSize: 'text-sm',
+      spacing: 'px-3 py-1.5',
+      ...tailwind
+    }}
     className={className ? className : 'btn-primary'}>
     Click me
   </Button>
 );
-
-// Option 2 - setup base properties and combine. Let library perform rollup.
-const Btn = ({ type, onClick, tailwind, className }) => {
-  const base = { bgColor: 'bg-blue-500', color: 'text-gray-700 dark:text-gray-300', fontSize: 'text-sm', spacing: 'px-3 py-1.5' }
-  const formattedTailwind = { ...base, ...tailwind };
-
-  return (
-    <Button
-      type={type}
-      onClick={onClick}
-      tailwind={formattedTailwind}
-      className={className ? className : 'btn-primary'}>
-      Click me
-    </Button>
-  )
-};
-
-// Option 3 - Perform rollup in your application. Pass as className thereby skipping library rollup.
-const Btn = ({ type, onClick, tailwind, className = 'btn-primary' }) => {
-  const base = { bgColor: 'bg-blue-500', color: 'text-gray-700 dark:text-gray-300', fontSize: 'text-sm', spacing: 'px-3 py-1.5' }
-  const classNames = classBuilder({ ...base, ...tailwind, className });
-
-  return (
-    <Button
-      type={type}
-      onClick={onClick}
-      className={classNames}>
-      Click me
-    </Button>
-  )
-};
 ```
 
 ## How it works
