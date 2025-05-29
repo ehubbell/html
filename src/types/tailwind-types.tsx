@@ -1,4 +1,4 @@
-export type TailwindType = {
+export type TailwindProps = {
 	align?: string;
 	aspect?: string;
 	animation?: string;

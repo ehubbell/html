@@ -1,7 +1,7 @@
-import { TailwindType } from 'types/tailwind-types';
+import { TailwindProps } from 'types/tailwind-types';
 
-export type LibType = {
+export type LibProps = {
 	name?: string;
-	tailwind?: TailwindType;
+	tailwind?: TailwindProps;
 	className?: string;
 };

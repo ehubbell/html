@@ -1,20 +1,19 @@
 ## Overview
-The official starter for the popular NextJS framework.
+A next-based starter that demonstrates the [@ehubbell/html](https://github.com/ehubbell/html) library in action.
 
 
 ## Prerequisites
 - Playbooks
 - Node
-- NPM
 - NextJS
+- Tailwind
 
 
 ## Quick Start
-- playbooks install next-official-starter
-- cd next-official-starter
 - npm install
+- npm run packages
 - npm run dev
-- visit http://localhost:3000
+- visit http://localhost:4200
 
 
 ## Links
