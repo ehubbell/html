@@ -1,17 +1,25 @@
 # Overview
- A series of HTML Element wrappers that offer tailwind and className rollups.
+ An HTML component library for Tailwind rollups.
+
+ ## Description
+ This library provides a wrapper around core HTML5 elements so you can pass in a `tailwind` property.
+ The library offers a type system for the `tailwind` property so we can properly rollup the provided
+ classNames and remove duplicates. The benefit is fewer libraries (no need for `classnames` or `clsx`)
+ and a smarter, better rollup system that's tailwind-friendly and highly composable.
 
 ## Prerequisites
 - Node
+- React
 - Tailwind
 
 ## Quickstart
-- npm i @ehubbell/html --save-dev
+- npm i @ehubbell/tailwind-html --save-dev
 
 ## Usage
 ```tsx
-import { Button } from '@ehubbell/html';
+import { Button, classBuilder } from '@ehubbell/tailwind-html';
 
+// Option 1 - simple, inline setup. Let library perform rollup.
 const Btn = ({ type, onClick, tailwind, className }) => (
   <Button
     type={type}
@@ -20,7 +28,38 @@ const Btn = ({ type, onClick, tailwind, className }) => (
     className={className ? className : 'btn-primary'}>
     Click me
   </Button>
-)
+);
+
+// Option 2 - setup base properties and combine. Let library perform rollup.
+const Btn = ({ type, onClick, tailwind, className }) => {
+  const base = { bgColor: 'bg-blue-500', color: 'text-gray-700 dark:text-gray-300', fontSize: 'text-sm', spacing: 'px-3 py-1.5' }
+  const formattedTailwind = { ...base, ...tailwind };
+
+  return (
+    <Button
+      type={type}
+      onClick={onClick}
+      tailwind={formattedTailwind}
+      className={className ? className : 'btn-primary'}>
+      Click me
+    </Button>
+  )
+};
+
+// Option 3 - Perform rollup in your application. Pass as className thereby skipping library rollup.
+const Btn = ({ type, onClick, tailwind, className = 'btn-primary' }) => {
+  const base = { bgColor: 'bg-blue-500', color: 'text-gray-700 dark:text-gray-300', fontSize: 'text-sm', spacing: 'px-3 py-1.5' }
+  const classNames = classBuilder({ ...base, ...tailwind, className });
+
+  return (
+    <Button
+      type={type}
+      onClick={onClick}
+      className={classNames}>
+      Click me
+    </Button>
+  )
+};
 ```
 
 ## How it works
@@ -77,10 +116,6 @@ const Btn = ({ type, onClick, tailwind, className }) => (
 - npm run build
 - npm publish
 - npm run git
-
-## Setup Husky
-- npx husky init
-- add `npm run clean` to `.husky/pre-commit.sh`
 
 ## Inspiration
 - tailwind
