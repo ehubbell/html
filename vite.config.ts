@@ -8,11 +8,7 @@ import { defineConfig } from 'vite';
 function pushBuild() {
 	exec('dts-bundle-generator --config dts.config.ts', (response, error) => {
 		if (error) console.error(error);
-		console.log('types pushed');
-		exec('npx yalc push', (response, error) => {
-			if (error) console.error(error);
-			console.log('yalc pushed');
-		});
+		exec('npx yalc push', (response, error) => (error ? console.error(error) : null));
 	});
 }
 
@@ -49,6 +45,7 @@ export default defineConfig({
 		alias: {
 			src: path.resolve(__dirname, '/src'),
 			components: path.resolve(__dirname, '/src/components'),
+			styles: path.resolve(__dirname, '/src/styles'),
 			types: path.resolve(__dirname, '/src/types'),
 			utils: path.resolve(__dirname, '/src/utils'),
 		},

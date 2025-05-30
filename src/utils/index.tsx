@@ -1,2 +1,2 @@
-export * from 'utils/class-builder';
+export * from 'utils/tailwind';
 export * from 'utils/helpers';
