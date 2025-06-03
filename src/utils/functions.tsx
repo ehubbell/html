@@ -19,13 +19,13 @@ export const classBuilder = props => {
 };
 
 export const propsFilter = props => {
-	let computed: any = {};
+	const computed: any = {};
 	Object.keys(props)
 		.filter((key, i, s) => s.indexOf(key) === i)
 		.filter(key => !Object.keys(tailwindProps).includes(key))
 		.map(key => {
 			const data = props[key];
-			return (computed = computed[key] = data);
+			return (computed[key] = data);
 		});
 	return computed;
 };

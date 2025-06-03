@@ -17,7 +17,7 @@
 
 ## Usage
 ```tsx
-import { Button, classBuilder } from '@ehubbell/tailwind-html';
+import { Button, classBuilder } from '@ehubbell/html';
 
 const Btn = ({ type, onClick, tailwind, className }) => (
   <Button
