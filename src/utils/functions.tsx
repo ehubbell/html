@@ -22,7 +22,7 @@ export const computeProps = props => {
 	const computed: any = {};
 	Object.keys(props)
 		.filter((key, i, s) => s.indexOf(key) === i)
-		.filter(key => !Object.keys({ ...tailwindProps, className: '' }).includes(key))
+		.filter(key => !Object.keys(tailwindProps).includes(key))
 		.map(key => {
 			const data = props[key];
 			return (computed[key] = data);
