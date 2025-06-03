@@ -128,3 +128,6 @@ export type TailwindFontWeightOpts =
 	| 'font-bold';
 
 export type TailwindPlacementOpts = string | 'left' | 'right';
+
+// Docs
+// https://v3.tailwindcss.com/docs/theme#configuration-reference

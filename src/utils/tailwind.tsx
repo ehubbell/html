@@ -74,6 +74,7 @@ export const tailwindProps = {
 	overflow: '',
 	padding: '',
 	placeholderColor: '',
+	pointerEvents: '',
 	position: '',
 	ring: '',
 	ringColor: '',
