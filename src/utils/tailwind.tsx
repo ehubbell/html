@@ -1,19 +1,24 @@
 const tailwindContainer = {
+	size: '',
 	center: '',
 	gutters: '',
 };
 
 const tailwindGrid = {
 	cols: '',
+	rows: '',
+	flow: '',
+	gap: '',
 };
 
 const tailwindCols = {
-	span: '',
 	sm: '',
 	md: '',
 	lg: '',
 	xl: '',
 	xxl: '',
+	span: '',
+	order: '',
 };
 
 export const tailwindProps = {
@@ -46,7 +51,6 @@ export const tailwindProps = {
 	fontWeight: '',
 	fontVariant: '',
 	flex: '',
-	gap: '',
 	grid: '',
 	gridFlow: '',
 	group: '',
@@ -63,7 +67,6 @@ export const tailwindProps = {
 	maxHeight: '',
 	minHeight: '',
 	opacity: '',
-	order: '',
 	origin: '',
 	outline: '',
 	outlineColor: '',
