@@ -1,4 +1,4 @@
-export type TailwindProps = TailwindGridType & {
+export type TailwindProps = TailwindGridProps & {
 	active?: string;
 	align?: string;
 	animation?: string;
@@ -28,6 +28,7 @@ export type TailwindProps = TailwindGridType & {
 	fontSize?: string;
 	fontStyle?: string;
 	fontWeight?: string;
+	fontVariant?: string;
 	flex?: string;
 	gap?: string;
 	grid?: string;
@@ -37,6 +38,9 @@ export type TailwindProps = TailwindGridType & {
 	hover?: string;
 	inset?: string;
 	leading?: string;
+	lineClamp?: string;
+	listImg?: string;
+	listPosition?: string;
 	listStyle?: string;
 	location?: string;
 	margin?: string;
@@ -57,7 +61,9 @@ export type TailwindProps = TailwindGridType & {
 	ringOffset?: string;
 	ringOffsetColor?: string;
 	rotate?: string;
+	scale?: string;
 	shadow?: string;
+	shadowColor?: string;
 	size?: string;
 	space?: string;
 	spacing?: string;
@@ -66,13 +72,14 @@ export type TailwindProps = TailwindGridType & {
 	tracking?: string;
 	transform?: string;
 	transition?: string;
+	translate?: string;
 	weight?: TailwindFontWeightOpts;
 	whiteSpace?: string;
 	width?: string;
 	zIndex?: string;
 };
 
-export type TailwindContainerType = {
+export type TailwindContainerProps = {
 	sm?: string;
 	md?: string;
 	lg?: string;
@@ -82,7 +89,7 @@ export type TailwindContainerType = {
 	gutters?: boolean;
 };
 
-export type TailwindGridType = {
+export type TailwindGridProps = {
 	sm?: string;
 	md?: string;
 	lg?: string;
@@ -96,7 +103,7 @@ export type TailwindGridType = {
 	gapY?: string;
 };
 
-export type TailwindColType = {
+export type TailwindColProps = {
 	sm?: string;
 	md?: string;
 	lg?: string;

@@ -7,7 +7,7 @@ export const computeTailwind = props => {
 	Object.keys(props)
 		// .sort((a, b) => (a < b ? -1 : 1))
 		.filter((key, i, s) => s.indexOf(key) === i)
-		.filter(key => Object.keys({ ...tailwindProps, className: '' }).includes(key))
+		// .filter(key => Object.keys({ ...tailwindProps, className: '' }).includes(key))
 		.map(key => {
 			const data = props[key];
 			if (isArray(data)) return;
