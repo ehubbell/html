@@ -13,7 +13,7 @@
 - Tailwind
 
 ## Quickstart
-- npm i @ehubbell/tailwind-html --save-dev
+- npm i @ehubbell/html --save-dev
 
 ## Usage
 ```tsx

@@ -1,7 +1,7 @@
 import { isArray, isEmpty, isObject } from 'utils/helpers';
 import { tailwindProps } from 'utils/tailwind';
 
-export const classBuilder = props => {
+export const computeTailwind = props => {
 	let classes = '';
 
 	Object.keys(props)
@@ -18,7 +18,7 @@ export const classBuilder = props => {
 	return classes;
 };
 
-export const propsFilter = props => {
+export const computeProps = props => {
 	const computed: any = {};
 	Object.keys(props)
 		.filter((key, i, s) => s.indexOf(key) === i)
