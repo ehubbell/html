@@ -13,6 +13,7 @@ export const computeTailwind = props => {
 			if (isArray(data)) return;
 			if (isObject(data)) return;
 			if (isEmpty(data)) return;
+			if (typeof data === 'function') return;
 			classes = classes.concat(data + ' ');
 		});
 	return classes;

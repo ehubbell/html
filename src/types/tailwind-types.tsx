@@ -1,7 +1,6 @@
 export type TailwindProps = TailwindContainerProps &
 	TailwindGridProps &
 	TailwindColProps & {
-		active?: string;
 		align?: string;
 		animation?: string;
 		aspect?: string;
