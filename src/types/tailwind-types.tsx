@@ -1,4 +1,4 @@
-export type TailwindProps = {
+export type TailwindProps = TailwindGridType & {
 	active?: string;
 	align?: string;
 	animation?: string;
@@ -14,6 +14,7 @@ export type TailwindProps = {
 	borderOpacity?: string;
 	borderRadius?: string;
 	borderStyle?: string;
+	cols?: string;
 	color?: string;
 	cursor?: string;
 	display?: string;
@@ -53,6 +54,8 @@ export type TailwindProps = {
 	position?: string;
 	ring?: string;
 	ringColor?: string;
+	ringOffset?: string;
+	ringOffsetColor?: string;
 	rotate?: string;
 	shadow?: string;
 	size?: string;
@@ -64,6 +67,7 @@ export type TailwindProps = {
 	transform?: string;
 	transition?: string;
 	weight?: TailwindFontWeightOpts;
+	whiteSpace?: string;
 	width?: string;
 	zIndex?: string;
 };

@@ -1,3 +1,21 @@
+const tailwindContainer = {
+	center: '',
+	gutters: '',
+};
+
+const tailwindGrid = {
+	cols: '',
+};
+
+const tailwindCols = {
+	span: '',
+	sm: '',
+	md: '',
+	lg: '',
+	xl: '',
+	xxl: '',
+};
+
 export const tailwindProps = {
 	align: '',
 	animation: '',
@@ -52,6 +70,8 @@ export const tailwindProps = {
 	position: '',
 	ring: '',
 	ringColor: '',
+	ringOffset: '',
+	ringOffsetColor: '',
 	rotate: '',
 	shadow: '',
 	size: '',
@@ -63,6 +83,10 @@ export const tailwindProps = {
 	transform: '',
 	transition: '',
 	weight: '',
+	whiteSpace: '',
 	width: '',
 	zIndex: '',
+	...tailwindContainer,
+	...tailwindGrid,
+	...tailwindCols,
 };
