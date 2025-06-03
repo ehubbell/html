@@ -18,5 +18,17 @@ export const classBuilder = props => {
 	return classes;
 };
 
+export const propsFilter = props => {
+	let computed: any = {};
+	Object.keys(props)
+		.filter((key, i, s) => s.indexOf(key) === i)
+		.filter(key => !Object.keys(tailwindProps).includes(key))
+		.map(key => {
+			const data = props[key];
+			return (computed = computed[key] = data);
+		});
+	return computed;
+};
+
 // Docs
 // https://tailwindcss.com/docs/configuration#referencing-in-java-script
