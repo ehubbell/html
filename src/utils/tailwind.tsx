@@ -13,7 +13,6 @@ export const tailwindProps = {
 	borderOpacity: '',
 	borderRadius: '',
 	borderStyle: '',
-	className: '',
 	color: '',
 	cursor: '',
 	display: '',
