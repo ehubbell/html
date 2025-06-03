@@ -1,7 +1,8 @@
 export type TailwindProps = {
+	active?: string;
 	align?: string;
-	aspect?: string;
 	animation?: string;
+	aspect?: string;
 	bgClip?: string;
 	bgColor?: string;
 	bgImage?: string;
@@ -21,6 +22,7 @@ export type TailwindProps = {
 	divideOpacity?: string;
 	duration?: string;
 	fade?: string;
+	focus?: string;
 	fontFamily?: TailwindFontFamilyOpts;
 	fontSize?: string;
 	fontStyle?: string;
@@ -46,7 +48,7 @@ export type TailwindProps = {
 	outlineColor?: string;
 	outlineOffset?: string;
 	overflow?: string;
-	pad?: string;
+	padding?: string;
 	placeholderColor?: string;
 	position?: string;
 	ring?: string;
@@ -59,8 +61,8 @@ export type TailwindProps = {
 	textDecoration?: string;
 	textTransform?: string;
 	tracking?: string;
-	transition?: string;
 	transform?: string;
+	transition?: string;
 	weight?: TailwindFontWeightOpts;
 	width?: string;
 	zIndex?: string;

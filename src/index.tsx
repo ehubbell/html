@@ -1,6 +1,7 @@
 import { LibProps, RHP } from 'types';
 import { classBuilder } from 'utils';
-export { classBuilder } from 'utils/tailwind';
+
+export { classBuilder, propsFilter } from 'utils';
 
 export const A = ({ name = 'A', tailwind, className, ...props }: RHP.AProps & LibProps) => {
 	const base = {};

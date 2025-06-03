@@ -1,18 +1,69 @@
-import { isArray, isEmpty, isObject } from 'utils/helpers';
-
-export const classBuilder = props => {
-	let classes = '';
-	Object.keys(props)
-		.filter((key, i, s) => s.indexOf(key) === i)
-		.map(key => {
-			const data = props[key];
-			if (isArray(data)) return;
-			if (isObject(data)) return;
-			if (isEmpty(data)) return;
-			classes = classes.concat(data + ' ');
-		});
-	return classes;
+export const tailwindProps = {
+	align: '',
+	animation: '',
+	aspect: '',
+	bgClip: '',
+	bgColor: '',
+	bgImage: '',
+	bgPosition: '',
+	bgOpacity: '',
+	bgSize: '',
+	border: '',
+	borderColor: '',
+	borderOpacity: '',
+	borderRadius: '',
+	borderStyle: '',
+	className: '',
+	color: '',
+	cursor: '',
+	display: '',
+	divide: '',
+	divideColor: '',
+	divideOpacity: '',
+	duration: '',
+	fade: '',
+	focus: '',
+	fontFamily: '',
+	fontSize: '',
+	fontStyle: '',
+	fontWeight: '',
+	flex: '',
+	gap: '',
+	grid: '',
+	gridFlow: '',
+	group: '',
+	height: '',
+	hover: '',
+	inset: '',
+	leading: '',
+	listStyle: '',
+	location: '',
+	margin: '',
+	maxHeight: '',
+	minHeight: '',
+	opacity: '',
+	order: '',
+	origin: '',
+	outline: '',
+	outlineColor: '',
+	outlineOffset: '',
+	overflow: '',
+	padding: '',
+	placeholderColor: '',
+	position: '',
+	ring: '',
+	ringColor: '',
+	rotate: '',
+	shadow: '',
+	size: '',
+	space: '',
+	spacing: '',
+	textDecoration: '',
+	textTransform: '',
+	tracking: '',
+	transform: '',
+	transition: '',
+	weight: '',
+	width: '',
+	zIndex: '',
 };
-
-// Docs
-// https://tailwindcss.com/docs/configuration#referencing-in-java-script
