@@ -1,6 +1,6 @@
 {
   "name": "@ehubbell/html",
-  "version": "0.0.16",
+  "version": "0.1.0",
   "description": "An HTML component library with Tailwind rollups.",
   "homepage": "https://github.com/ehubbell/html",
   "license": "ISC",
@@ -22,7 +22,7 @@
   "files": [
     "dist"
   ],
-    "keywords": [
+  "keywords": [
     "html",
     "react",
     "playbooks",
