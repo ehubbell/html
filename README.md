@@ -21,8 +21,9 @@ const Btn = ({ type, onClick, tailwind, className }) => (
     onClick={onClick}
     tailwind={{
       bgColor: 'bg-blue-500',
-      color: 'text-gray-700 dark:text-gray-300',
+      color: 'text-white',
       fontSize: 'text-sm',
+      hover: 'hover:bg-blue-400',
       spacing: 'px-3 py-1.5',
       ...tailwind
     }}
@@ -37,9 +38,10 @@ const Btn = ({ type, onClick, tailwind, className }) => (
 - Every element accepts it's standard HTML attributes
 - Every element also accepts two additional properties `[name, tailwind]`
 - The `name` property gets converted to the `data-name` attibute for better DOM tree navigation
-- The `tailwind` property accepts an object, defined by you, containing tailwind classNames
+- The `tailwind` property accepts an arbitrary object, defined by you, containing tailwind className values
 - The library will then rollup that object into a `className` string and pass it to the HTML element while removing duplicates
-- The end result is a fun, composable and organized DX.
+- The end result is a fun, composable and organized DX bjuilt for tailwind projects.
+
 
 ## Supported HTML Elements
 
