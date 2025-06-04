@@ -1,11 +1,7 @@
 # Overview
- An HTML component library with Tailwind rollups.
-
- ## Description
- This library provides a wrapper around core HTML5 elements so you can pass in a `tailwind` property.
- The library offers a type system for the `tailwind` property so we can properly rollup the provided
- classNames and remove duplicates. The benefit is fewer libraries (no need for `classnames` or `clsx`)
- and a smarter, better rollup system that's tailwind-friendly and highly composable.
+ This library provides a wrapper around HTML5 elements that allows you to pass in a `tailwind` property for className rollups.
+ This allows us to remove duplicate classNames while allowing you to override base classNames through inheritance.
+ The end result is fewer libraries (no need for clsx or classnames) and an HTML-library built for a composable, and organized, DX.
 
 ## Prerequisites
 - Node
@@ -17,7 +13,7 @@
 
 ## Usage
 ```tsx
-import { Button, classBuilder } from '@ehubbell/html';
+import { Button } from '@ehubbell/html';
 
 const Btn = ({ type, onClick, tailwind, className }) => (
   <Button
@@ -37,11 +33,13 @@ const Btn = ({ type, onClick, tailwind, className }) => (
 ```
 
 ## How it works
-- The library wraps core HTML element
-- Every element comes with an optional `base` value powered by your theme
-- Every element computes three core properties `[name, tailwind, className]`
-- Every element also accepts it's standard properties
-- The library then builds your class schedule, per element, using a simple roll up system
+- The library wraps core HTML5 element
+- Every element accepts it's standard HTML attributes
+- Every element also accepts two additional properties `[name, tailwind]`
+- The `name` property gets converted to the `data-name` attibute for better DOM tree navigation
+- The `tailwind` property accepts an object, defined by you, containing tailwind classNames
+- The library will then rollup that object into a `className` string and pass it to the HTML element while removing duplicates
+- The end result is a fun, composable and organized DX.
 
 ## Supported HTML Elements
 

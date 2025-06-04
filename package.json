@@ -22,6 +22,14 @@
   "files": [
     "dist"
   ],
+    "keywords": [
+    "html",
+    "react",
+    "playbooks",
+    "tailwind",
+    "tailwind rollups",
+    "typescript"
+  ],
   "scripts": {
     "dev": "vite build --mode development --watch --minify false",
     "start": "vite build --mode development --minify false && npm run start:ts",

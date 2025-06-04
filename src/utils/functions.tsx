@@ -5,7 +5,6 @@ export const computeTailwind = props => {
 	let classes = '';
 
 	Object.keys(props)
-		// .sort((a, b) => (a < b ? -1 : 1))
 		.filter((key, i, s) => s.indexOf(key) === i)
 		// .filter(key => Object.keys({ ...tailwindProps, className: '' }).includes(key))
 		.map(key => {
