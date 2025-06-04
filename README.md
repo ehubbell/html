@@ -82,23 +82,28 @@ const Btn = ({ type, onClick, tailwind, className }) => (
 
 
 ## Development
-- git clone
-- npm install
-- npm start
-- npm link
+This project is designed for development using the [yalc](https://npmjs.com/package/yalc) library.
+- npm run dev
 - switch to project
-- npm link <package_name>
+- npx yalc add @playbooks/theme
+- You may need to restart your application server
+- After that, this library will hot reload into the consuming application
 
 
-## Deployment
-- npm version [major|minor|patch]
-- npm run build
-- npm publish
-- npm run git
+## Scripts
+- We've included a couple of helpful scripts for faster development.
+- deploy: `npm run deploy -- 'commit message'`
+- publish: `npm run publish -- 'commit message' [major|minor|patch]`
 
 
-## Inspiration
-- tailwind
+## Husky
+- Husky configuration is setup to lint and format the repo on every commit
+- Edit the `.husky/pre-commit` file to change your settings
+
+
+## Author
+- [Eric Hubbell](http://www.erichubbell.com)
+- eric@erichubbell.com
 
 
 ## Notes
