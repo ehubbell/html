@@ -3,15 +3,14 @@
  This allows us to remove duplicate classNames while allowing you to override base classNames through inheritance.
  The end result is fewer libraries (no need for clsx or classnames) and an HTML-library built for a composable, and organized, DX.
 
-
-## Installation
+## Prerequisites
 - Node
 - Tailwind
 
+## Installation
 ```
 npm install @ehubbell/html
 ```
-
 
 ## Usage
 ```tsx
@@ -35,7 +34,6 @@ const Btn = ({ type, onClick, tailwind, className }) => (
 );
 ```
 
-
 ## How it works
 - The library wraps core HTML5 element
 - Every element accepts it's standard HTML attributes
@@ -44,7 +42,6 @@ const Btn = ({ type, onClick, tailwind, className }) => (
 - The `tailwind` property accepts an arbitrary object, defined by you, containing tailwind className values
 - The library will then rollup that object into a `className` string and pass it to the HTML element while removing duplicates
 - The end result is a fun, composable and organized DX bjuilt for tailwind projects.
-
 
 ## Supported HTML Elements
 
@@ -80,7 +77,6 @@ const Btn = ({ type, onClick, tailwind, className }) => (
 |                          |                          |                           | `<summary>`                |                             |
 |                          |                          |                           | `<sup>`                    |                             |
 
-
 ## Development
 This project is designed for development using the [yalc](https://npmjs.com/package/yalc) library.
 - npm run dev
@@ -89,22 +85,18 @@ This project is designed for development using the [yalc](https://npmjs.com/pack
 - You may need to restart your application server
 - After that, this library will hot reload into the consuming application
 
-
 ## Scripts
 - We've included a couple of helpful scripts for faster development.
 - deploy: `npm run deploy -- 'commit message'`
 - publish: `npm run publish -- 'commit message' [major|minor|patch]`
 
-
 ## Husky
 - Husky configuration is setup to lint and format the repo on every commit
 - Edit the `.husky/pre-commit` file to change your settings
 
-
 ## Author
 - [Eric Hubbell](http://www.erichubbell.com)
 - eric@erichubbell.com
-
 
 ## Notes
 To see this library in action, checkout the following libraries and projects:
