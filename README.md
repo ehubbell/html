@@ -1,15 +1,17 @@
-# Overview
+## Overview
  This library provides a wrapper around HTML5 elements that allows you to pass in a `tailwind` property for className rollups.
  This allows us to remove duplicate classNames while allowing you to override base classNames through inheritance.
  The end result is fewer libraries (no need for clsx or classnames) and an HTML-library built for a composable, and organized, DX.
 
-## Prerequisites
+
+## Installation
 - Node
-- React
 - Tailwind
 
-## Quickstart
-- npm i @ehubbell/html
+```
+npm install @ehubbell/html
+```
+
 
 ## Usage
 ```tsx
@@ -32,6 +34,7 @@ const Btn = ({ type, onClick, tailwind, className }) => (
   </Button>
 );
 ```
+
 
 ## How it works
 - The library wraps core HTML5 element
@@ -77,6 +80,7 @@ const Btn = ({ type, onClick, tailwind, className }) => (
 |                          |                          |                           | `<summary>`                |                             |
 |                          |                          |                           | `<sup>`                    |                             |
 
+
 ## Development
 - git clone
 - npm install
@@ -85,12 +89,20 @@ const Btn = ({ type, onClick, tailwind, className }) => (
 - switch to project
 - npm link <package_name>
 
+
 ## Deployment
 - npm version [major|minor|patch]
 - npm run build
 - npm publish
 - npm run git
 
+
 ## Inspiration
 - tailwind
-- @playbooks/ui
+
+
+## Notes
+To see this library in action, checkout the following libraries and projects:
+- [playbooks](https://www.playbooks.xyz)
+- [@playbooks/ui][https://github.com/playbooks-xyz/playbooks-ui]
+- [@playbooks/theme][https://github.com/playbooks-xyz/playbooks-theme]
