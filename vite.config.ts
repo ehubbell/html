@@ -1,5 +1,3 @@
-import react from '@vitejs/plugin-react';
-
 import { exec } from 'node:child_process';
 import path from 'path';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
@@ -35,7 +33,6 @@ export default defineConfig({
 		},
 	},
 	plugins: [
-		react(),
 		{
 			name: 'push-build',
 			closeBundle: pushBuild,

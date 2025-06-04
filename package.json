@@ -24,9 +24,10 @@
   ],
   "scripts": {
     "dev": "vite build --mode development --watch --minify false",
-    "start": "vite build --mode development --minify false && yalc publish",
-    "start:ts": "vite build --mode development --minify false && dts-bundle-generator --config dts.config.ts && yalc publish",
-    "build": "vite build --mode production --minify true && dts-bundle-generator --config dts.config.ts",
+    "start": "vite build --mode development --minify false && npm run start:ts",
+    "start:ts": "dts-bundle-generator --config dts.config.ts",
+    "build": "vite build --mode production --minify true && npm run build:ts",
+    "build:ts": "dts-bundle-generator --config dts.config.ts",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
     "format": "prettier src",
@@ -42,6 +43,9 @@
     "react": "^18 || ^19",
     "react-dom": "^18 || ^19"
   },
+    "dependencies": {
+    "react-html-props": "^2.1.1"
+  },
   "devDependencies": {
     "@types/accounting": "^0.4.5",
     "@types/jest": "^29.5.1",
@@ -49,7 +53,6 @@
     "@types/react-dom": "^18.0.9",
     "@typescript-eslint/eslint-plugin": "^5.46.0",
     "@typescript-eslint/parser": "^5.46.0",
-    "@vitejs/plugin-react": "^3.0.0",
     "dts-bundle-generator": "^9.5.1",
     "eslint": "^8.29.0",
     "eslint-config-prettier": "^9.1.0",
@@ -68,8 +71,5 @@
     "typescript": "^4.9.4",
     "vite": "^4.0.0",
     "vite-plugin-dts": "^4.5.0"
-  },
-  "dependencies": {
-    "react-html-props": "^2.1.1"
   }
 }

@@ -1,5 +1,4 @@
 const tailwindContainer = {
-	size: '',
 	center: '',
 	gutters: '',
 };
@@ -29,11 +28,9 @@ export const tailwindProps = {
 	bgColor: '',
 	bgImage: '',
 	bgPosition: '',
-	bgOpacity: '',
 	bgSize: '',
 	border: '',
 	borderColor: '',
-	borderOpacity: '',
 	borderRadius: '',
 	borderStyle: '',
 	color: '',
@@ -41,9 +38,8 @@ export const tailwindProps = {
 	display: '',
 	divide: '',
 	divideColor: '',
-	divideOpacity: '',
 	duration: '',
-	fade: '',
+	ease: '',
 	focus: '',
 	fontFamily: '',
 	fontSize: '',
