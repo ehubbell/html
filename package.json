@@ -27,14 +27,14 @@
     "react",
     "playbooks",
     "tailwind",
-    "tailwind-html",
-    "tailwind-rollups",
+    "tailwind rollups",
     "typescript"
   ],
   "scripts": {
-    "dev": "vite build --mode development --watch --minify false --sourcemap",
+    "dev": "vite build --mode development --watch --minify false",
     "start": "vite build --mode development --minify false && npm run start:ts",
-    "build": "vite build --mode production --minify true",
+    "start:ts": "dts-bundle-generator --config dts.config.ts",
+    "build": "vite build --mode production --minify true && npm run build:ts",
     "build:ts": "dts-bundle-generator --config dts.config.ts",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",

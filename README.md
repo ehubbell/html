@@ -14,8 +14,6 @@ npm install @ehubbell/html
 
 ## Usage
 ```tsx
-
-# Component
 import { Button } from '@ehubbell/html';
 
 const Btn = ({ type, onClick, tailwind, className }) => (
@@ -34,20 +32,6 @@ const Btn = ({ type, onClick, tailwind, className }) => (
     Click me
   </Button>
 );
-
-# Usage
-
-import { Btn } from '@/components/btn';
-
-<Btn type='button' onClick={onClick} tailwind={{ bgColor: 'bg-black' }}>
-  Click me
-</Btn>
-
-# Result:
-<button type={type} onClick={onClick} className='bg-black text-white text-sm hover:bg-blue-400 px-3 py-1.5'>
-  Click me
-</button>
-
 ```
 
 ## How it works
@@ -102,9 +86,9 @@ This project is designed for development using the [yalc](https://npmjs.com/pack
 - After that, this library will hot reload into the consuming application
 
 ## Scripts
-We've included a couple of helpful scripts for faster development.
-- `npm run deploy -- 'commit message'`
-- `npm run publish -- 'commit message' [major|minor|patch]`
+- We've included a couple of helpful scripts for faster development.
+- deploy: `npm run deploy -- 'commit message'`
+- publish: `npm run publish -- 'commit message' [major|minor|patch]`
 
 ## Husky
 - Husky configuration is setup to lint and format the repo on every commit
@@ -115,7 +99,7 @@ We've included a couple of helpful scripts for faster development.
 - eric@erichubbell.com
 
 ## Notes
-To see this library in action, checkout these related projects:
+To see this library in action, checkout the following projects:
 - [playbooks](https://www.playbooks.xyz)
-- [playbooks/ui](https://github.com/playbooks-xyz/playbooks-ui)
-- [playbooks/theme](https://github.com/playbooks-xyz/playbooks-theme)
+- [@playbooks/ui](https://github.com/playbooks-xyz/playbooks-ui)
+- [@playbooks/theme](https://github.com/playbooks-xyz/playbooks-theme)

@@ -2,13 +2,13 @@
 	"autorun": true,
 	"terminals": [
 		{
-			"name": "playbooks-html",
+			"name": "ehubbell-html",
 			"focus": true,
 			"execute": false,
 			"command": "npm start"
 		},
 		{
-			"name": "playbooks-html-alt",
+			"name": "ehubbell-html-alt",
 			"focus": true,
 			"execute": false,
 			"command": "npm link"
