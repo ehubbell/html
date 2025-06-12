@@ -26,7 +26,7 @@ export default defineConfig(({ mode }) => {
 			lib: {
 				entry: path.resolve(__dirname, 'src/index.tsx'),
 				name: 'HTML',
-				formats: ['es', 'cjs', 'umd', 'iife'],
+				formats: ['es', 'cjs'],
 				fileName: format => `index.${format}.js`,
 			},
 			rollupOptions: {
