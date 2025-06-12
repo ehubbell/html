@@ -16,36 +16,40 @@ function pushBuild() {
 	};
 }
 
-export default defineConfig({
-	base: './',
-	build: {
-		sourcemap: true,
-		lib: {
-			entry: path.resolve(__dirname, 'src/index.tsx'),
-			name: 'HTML',
-			formats: ['es', 'cjs', 'umd', 'iife'],
-			fileName: format => `index.${format}.js`,
-		},
-		rollupOptions: {
-			external: ['react', 'react-dom', 'react/jsx-runtime'],
-			output: {
-				globals: {
-					react: 'React',
-					'react-dom': 'ReactDOM',
-					'react/jsx-runtime': 'react/jsx-runtime',
-				},
+export default defineConfig(({ mode }) => {
+	const plugins = mode !== 'production' ? [pushBuild()] : [];
+
+	return {
+		base: './',
+		build: {
+			sourcemap: true,
+			lib: {
+				entry: path.resolve(__dirname, 'src/index.tsx'),
+				name: 'HTML',
+				formats: ['es', 'cjs', 'umd', 'iife'],
+				fileName: format => `index.${format}.js`,
 			},
-			plugins: [peerDepsExternal()],
+			rollupOptions: {
+				external: ['react', 'react-dom', 'react/jsx-runtime'],
+				output: {
+					globals: {
+						react: 'React',
+						'react-dom': 'ReactDOM',
+						'react/jsx-runtime': 'react/jsx-runtime',
+					},
+				},
+				plugins: [peerDepsExternal()],
+			},
 		},
-	},
-	plugins: [pushBuild()],
-	resolve: {
-		alias: {
-			src: path.resolve(__dirname, '/src'),
-			components: path.resolve(__dirname, '/src/components'),
-			styles: path.resolve(__dirname, '/src/styles'),
-			types: path.resolve(__dirname, '/src/types'),
-			utils: path.resolve(__dirname, '/src/utils'),
+		plugins,
+		resolve: {
+			alias: {
+				src: path.resolve(__dirname, '/src'),
+				components: path.resolve(__dirname, '/src/components'),
+				styles: path.resolve(__dirname, '/src/styles'),
+				types: path.resolve(__dirname, '/src/types'),
+				utils: path.resolve(__dirname, '/src/utils'),
+			},
 		},
-	},
+	};
 });
