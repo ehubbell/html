@@ -1,7 +1,7 @@
-import { LibProps, RHP } from 'types';
-import { computeTailwind } from 'utils';
+import { LibProps, RHP } from 'src/types';
+import { computeTailwind } from 'src/utils';
 
-export { computeTailwind, computeProps } from 'utils';
+export { computeTailwind, computeProps } from 'src/utils';
 
 export const A = ({ name = 'A', tailwind, className, ...props }: RHP.AProps & LibProps) => {
 	const base = {};

@@ -1,3 +1,3 @@
-export * from 'types/basic-types';
-export * from 'types/library-types';
-export * from 'types/tailwind-types';
+export * from 'src/types/basic-types';
+export * from 'src/types/library-types';
+export * from 'src/types/tailwind-types';

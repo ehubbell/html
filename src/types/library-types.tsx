@@ -1,4 +1,4 @@
-import { TailwindProps } from 'types/tailwind-types';
+import { TailwindProps } from 'src/types/tailwind-types';
 
 export type LibProps = {
 	name?: string;

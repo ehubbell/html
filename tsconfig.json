@@ -1,9 +1,12 @@
 {
   "extends": "@ehubbell/configs/ts-config-package",
   "compilerOptions": {
-    "baseUrl": "src",
-    "rootDir": ".",
+		"baseUrl": ".",
+		"rootDir": "src",
+		"outDir": "dist",
+		"declaration": true,
+		"emitDeclarationOnly": true
   },
-  "include": ["src", "tests", "types", "vite.config.ts"],
+  "include": ["src"],
   "exclude": ["node_modules"],
 }

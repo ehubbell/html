@@ -1,3 +1,3 @@
-export * from 'utils/functions';
-export * from 'utils/helpers';
-export * from 'utils/tailwind';
+export * from 'src/utils/functions';
+export * from 'src/utils/helpers';
+export * from 'src/utils/tailwind';

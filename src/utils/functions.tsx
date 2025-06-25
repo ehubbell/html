@@ -1,5 +1,5 @@
-import { isArray, isEmpty, isObject } from 'utils/helpers';
-import { tailwindProps } from 'utils/tailwind';
+import { isArray, isEmpty, isObject } from 'src/utils/helpers';
+import { tailwindProps } from 'src/utils/tailwind';
 
 export const computeTailwind = props => {
 	let classes = '';
