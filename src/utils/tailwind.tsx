@@ -21,6 +21,7 @@ const tailwindCols = {
 };
 
 export const tailwindProps = {
+	active: '',
 	align: '',
 	animation: '',
 	aspect: '',
@@ -39,7 +40,7 @@ export const tailwindProps = {
 	divide: '',
 	divideColor: '',
 	duration: '',
-	ease: '',
+	fade: '',
 	focus: '',
 	fontFamily: '',
 	fontSize: '',
