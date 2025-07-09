@@ -1,7 +1,7 @@
 ## Overview
  This library provides a wrapper around HTML5 elements that allows you to pass in a `tailwind` property for className rollups.
  This allows us to remove duplicate classNames while allowing you to override base classNames through inheritance.
- The end result is fewer libraries (no need for clsx or classnames) and an HTML-library built for a composable, and organized, DX.
+ The end result is fewer libraries (no need for clsx or classnames) alongside a fast, flexible, and composable DX.
 
 ## Prerequisites
 - Node
