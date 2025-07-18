@@ -1,0 +1,10 @@
+{
+  "version": "v1",
+  "packages": {
+    "vite-plugin-size": {
+      "signature": "c2a17f9c36a1521fd1ca32fcb236cef8",
+      "file": true,
+      "replaced": "^0.1.2"
+    }
+  }
+}

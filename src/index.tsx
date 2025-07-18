@@ -1,5 +1,5 @@
-import { LibProps, RHP } from 'src/types';
 import { computeTailwind } from 'src/utils';
+import { LibProps, RHP } from 'types';
 
 export { computeTailwind, computeProps } from 'src/utils';
 
