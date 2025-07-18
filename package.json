@@ -5,7 +5,7 @@
   "homepage": "https://github.com/ehubbell/html",
   "license": "ISC",
   "type": "module",
-  "main": "dist/index.cjs.js",
+  "main": "dist/index.es.js",
   "author": {
     "name": "Eric Hubbell",
     "email": "eric@erichubbell.com",
@@ -66,7 +66,7 @@
     "tslib": "^2.8.1",
     "typescript": "^5.8.3",
     "vite": "^7.0.0",
-    "vite-plugin-size": "file:.yalc/vite-plugin-size",
+    "vite-plugin-size": "^0.1.4",
     "vite-plugin-yalc": "^0.0.11"
   },
   "exports": {

@@ -2,7 +2,7 @@
   "version": "v1",
   "packages": {
     "vite-plugin-size": {
-      "signature": "c2a17f9c36a1521fd1ca32fcb236cef8",
+      "signature": "b98dbbc9552a8ccacdabee563e0d566e",
       "file": true,
       "replaced": "^0.1.2"
     }
