@@ -21,7 +21,6 @@ const tailwindCols = {
 };
 
 export const tailwindProps = {
-	active: '',
 	align: '',
 	animation: '',
 	aspect: '',
