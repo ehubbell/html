@@ -1,7 +1,7 @@
 import { isArray, isEmpty, isObject } from 'src/utils/helpers';
 import { tailwindProps } from 'src/utils/tailwind';
 
-export const computeTailwind = props => {
+export const computeClasses = props => {
 	let classes = '';
 
 	Object.keys(props)

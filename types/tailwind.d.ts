@@ -37,6 +37,8 @@ export type TailwindProps = TailwindContainerProps &
 		height?: string;
 		hover?: string;
 		inset?: string;
+		items?: string;
+		justify?: string;
 		leading?: string;
 		lineClamp?: string;
 		listImg?: string;
@@ -54,6 +56,7 @@ export type TailwindProps = TailwindContainerProps &
 		outlineOffset?: string;
 		overflow?: string;
 		padding?: string;
+		path?: string;
 		placeholderColor?: string;
 		position?: string;
 		ring?: string;
@@ -67,6 +70,7 @@ export type TailwindProps = TailwindContainerProps &
 		size?: string;
 		space?: string;
 		spacing?: string;
+		stroke?: string;
 		textDecoration?: string;
 		textTransform?: string;
 		tracking?: string;
