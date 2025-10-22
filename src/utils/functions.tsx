@@ -1,5 +1,5 @@
 import { isArray, isEmpty, isObject } from 'src/utils/helpers';
-import { tailwindProps } from 'src/utils/tailwind';
+import { tailwindKeys } from 'src/utils/keys';
 
 export const filterClasses = (data, attrs = [], include = true) => {
 	const formattedData = {};
@@ -14,7 +14,7 @@ export const computeClasses = props => {
 
 	Object.keys(props)
 		.filter((key, i, s) => s.indexOf(key) === i)
-		// .filter(key => Object.keys({ ...tailwindProps, className: '' }).includes(key))
+		// .filter(key => Object.keys({ ...tailwindKeys, className: '' }).includes(key))
 		.map(key => {
 			const data = props[key];
 			if (isArray(data)) return;
@@ -30,7 +30,7 @@ export const computeProps = props => {
 	const computed: any = {};
 	Object.keys(props)
 		.filter((key, i, s) => s.indexOf(key) === i)
-		.filter(key => !Object.keys(tailwindProps).includes(key))
+		.filter(key => !Object.keys(tailwindKeys).includes(key))
 		.map(key => {
 			const data = props[key];
 			return (computed[key] = data);

@@ -1,26 +1,4 @@
-const tailwindContainer = {
-	center: '',
-	gutters: '',
-};
-
-const tailwindGrid = {
-	cols: '',
-	rows: '',
-	flow: '',
-	gap: '',
-};
-
-const tailwindCols = {
-	sm: '',
-	md: '',
-	lg: '',
-	xl: '',
-	xxl: '',
-	span: '',
-	order: '',
-};
-
-export const tailwindProps = {
+const tailwindBaseKeys = {
 	align: '',
 	animation: '',
 	aspect: '',
@@ -97,7 +75,33 @@ export const tailwindProps = {
 	whiteSpace: '',
 	width: '',
 	zIndex: '',
-	...tailwindContainer,
-	...tailwindGrid,
-	...tailwindCols,
+};
+
+const tailwindContainerKeys = {
+	center: '',
+	gutters: '',
+};
+
+const tailwindGridKeys = {
+	cols: '',
+	rows: '',
+	flow: '',
+	gap: '',
+};
+
+const tailwindColKeys = {
+	sm: '',
+	md: '',
+	lg: '',
+	xl: '',
+	xxl: '',
+	span: '',
+	order: '',
+};
+
+export const tailwindKeys = {
+	...tailwindBaseKeys,
+	...tailwindContainerKeys,
+	...tailwindGridKeys,
+	...tailwindColKeys,
 };
