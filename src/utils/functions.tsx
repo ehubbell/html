@@ -1,6 +1,14 @@
 import { isArray, isEmpty, isObject } from 'src/utils/helpers';
 import { tailwindProps } from 'src/utils/tailwind';
 
+export const filterClasses = (data, attrs = [], include = true) => {
+	const formattedData = {};
+	Object.keys(data)
+		.filter(key => (include ? attrs.includes(key) : !attrs.includes(key)))
+		.map(key => (formattedData[key] = data[key]));
+	return formattedData;
+};
+
 export const computeClasses = props => {
 	let classes = '';
 

@@ -86,6 +86,7 @@ export const tailwindProps = {
 	space: '',
 	spacing: '',
 	stroke: '',
+	tailwind: '',
 	textDecoration: '',
 	textTransform: '',
 	tracking: '',
