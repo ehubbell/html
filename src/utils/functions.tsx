@@ -1,7 +1,7 @@
 import { isArray, isEmpty, isObject } from 'src/utils/helpers';
 import { tailwindKeys } from 'src/utils/keys';
 
-export const filterTwKeys = (data, attrs = [], include = true) => {
+export const filterTwData = (data, attrs = [], include = true) => {
 	const formattedData = {};
 	Object.keys(data)
 		.filter(key => (include ? attrs.includes(key) : !attrs.includes(key)))
@@ -26,7 +26,7 @@ export const computeTwClassNames = props => {
 	return classes;
 };
 
-export const computeTwKeys = props => {
+export const computeTwData = props => {
 	const formattedData = {};
 	Object.keys(props)
 		.filter((key, i, s) => s.indexOf(key) === i)
