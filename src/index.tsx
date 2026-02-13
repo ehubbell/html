@@ -419,6 +419,11 @@ export const Small = ({ name = 'Small', tailwind, className, ...props }: RHP.Sma
 	return <small data-name={name} className={classes} {...props} />;
 };
 
+export const Source = ({ name = 'Source', tailwind, className, ...props }: RHP.SourceProps & LibProps) => {
+	const classes = computeTwClassNames({ ...tailwind, className });
+	return <source data-name={name} className={classes} {...props} />;
+};
+
 export const Span = ({ name = 'Span', tailwind, className, ...props }: RHP.SpanProps & LibProps) => {
 	const classes = computeTwClassNames({ ...tailwind, className });
 	return <span data-name={name} className={classes} {...props} />;

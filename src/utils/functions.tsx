@@ -23,7 +23,7 @@ export const computeTwClassNames = props => {
 
 	Object.keys(props)
 		.filter((key, i, s) => s.indexOf(key) === i)
-		// .filter(key => Object.keys({ ...tailwindKeys, className: '' }).includes(key))
+		.filter(key => Object.keys({ ...tailwindKeys, className: '' }).includes(key))
 		.map(key => {
 			const data = props[key];
 			if (isArray(data)) return;

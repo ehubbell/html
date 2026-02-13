@@ -4,6 +4,7 @@ export type TailwindProps = TailwindContainerProps &
 		align?: string;
 		animation?: string;
 		aspect?: string;
+		bgBlur?: string;
 		bgClip?: string;
 		bgColor?: string;
 		bgImage?: string;
@@ -15,6 +16,7 @@ export type TailwindProps = TailwindContainerProps &
 		borderOpacity?: string;
 		borderRadius?: string;
 		borderStyle?: string;
+		bottom?: string;
 		cols?: string;
 		color?: string;
 		cursor?: string;
@@ -40,6 +42,7 @@ export type TailwindProps = TailwindContainerProps &
 		items?: string;
 		justify?: string;
 		leading?: string;
+		left?: string;
 		lineClamp?: string;
 		listImg?: string;
 		listPosition?: string;
@@ -63,6 +66,7 @@ export type TailwindProps = TailwindContainerProps &
 		ringColor?: string;
 		ringOffset?: string;
 		ringOffsetColor?: string;
+		right?: string;
 		rotate?: string;
 		scale?: string;
 		shadow?: string;
@@ -73,6 +77,7 @@ export type TailwindProps = TailwindContainerProps &
 		stroke?: string;
 		textDecoration?: string;
 		textTransform?: string;
+		top?: string;
 		tracking?: string;
 		transform?: string;
 		transition?: string;
