@@ -26,21 +26,30 @@ The library rolls `className` and allowed `tailwind` entries into one `className
 - Preserve the simple, explicit primitive pattern unless the task specifically asks for generation or a broader refactor.
 - Keep `types/tailwind.d.ts` and `src/utils/keys.tsx` aligned when adding, removing, or renaming Tailwind keys.
 - Use the configured `src` and `types` path aliases instead of long relative imports when matching existing code.
-- Avoid editing `dist`; it is ignored build output.
 - Treat existing uncommitted changes as user work. Do not revert or overwrite unrelated local changes.
 - Keep public API changes intentional. New helpers exported from `src/utils/functions.tsx` are re-exported through `src/index.tsx`.
 - Prefer focused tests around prop filtering, class rollup, and primitive rendering behavior when changing runtime logic.
+- Keep `filterProps`, `formatProps`, and `formatClassNames` dependency-free and hot-path friendly.
+- Prefer module-scope lookup structures and single-pass loops for prop filtering and class rollup code.
+- Preserve the clean helper names. Do not add legacy helper aliases unless explicitly requested.
+- When searching, use `rg` with excludes such as `-g '!dist' -g '!.yalc' -g '!node_modules'`.
+
+## Off Limits
+
+- Do not edit this `AGENTS.md` file unless the user explicitly instructs you to do so or confirms the edit in the current conversation.
+- Do not read, search through, or edit `dist/`; it is ignored build output.
+- Do not read, search through, or edit `.yalc/` or yalc-managed archive/cache content.
+- Do not inspect yalc internals unless the user explicitly asks to debug yalc itself.
+- Do not touch `yalc.lock` unless the task is specifically about package or link metadata.
 
 ## Commands
 
 - `npm run lint` runs ESLint over `src`.
-- `npm test -- --runInBand` runs Jest. At the time this guide was added, this fails locally because Jest cannot resolve `@ehubbell/configs/ts-config-package` while parsing `jest.config.ts`.
+- `npm test -- --runInBand` runs the focused Jest suite.
 - `npm run build` builds the library with Vite and runs declaration bundling through the Vite plugin setup.
 - `npm run dev` runs a development watch build intended for yalc-linked consumer projects.
 
 ## Known Notes
 
-- The current tests appear stale: `tests/first.test.ts` imports `isEven` and `isOdd`, which are not current library exports.
-- The current worktree includes local yalc-related changes for `vite-plugin-size`; do not assume package manager metadata is pristine.
 - The README is the best quick reference for intended consumer usage.
 - The package peers `react` and `react-dom`, and depends on `react-html-props` for element prop types.
