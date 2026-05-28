@@ -72,7 +72,7 @@ const tailwindBaseKeys = {
 	transition: '',
 	translate: '',
 	weight: '',
-	whiteSpace: '',
+	whitespace: '',
 	width: '',
 	zIndex: '',
 };

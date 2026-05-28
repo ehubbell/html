@@ -1,7 +1,7 @@
 import { isArray, isEmpty, isObject } from 'src/utils/helpers';
 import { tailwindKeys } from 'src/utils/keys';
 
-export const filterTwProps = (data, attrs = [], include = true) => {
+export const filterProps = (data, attrs = [], include = true) => {
 	const formattedData = {};
 	Object.keys(data)
 		.filter(key => (include ? attrs.includes(key) : !attrs.includes(key)))
@@ -9,7 +9,7 @@ export const filterTwProps = (data, attrs = [], include = true) => {
 	return formattedData;
 };
 
-export const computeTwProps = props => {
+export const formatProps = props => {
 	const formattedData = {};
 	Object.keys(props)
 		.filter((key, i, s) => s.indexOf(key) === i)
@@ -18,12 +18,13 @@ export const computeTwProps = props => {
 	return formattedData;
 };
 
-export const computeTwClassNames = props => {
+export const formatClassNames = props => {
 	let classes = '';
+	const keys = Object.keys(tailwindKeys);
 
 	Object.keys(props)
 		.filter((key, i, s) => s.indexOf(key) === i)
-		.filter(key => Object.keys({ ...tailwindKeys, className: '' }).includes(key))
+		.filter(key => [...keys, 'className'].includes(key))
 		.map(key => {
 			const data = props[key];
 			if (isArray(data)) return;
