@@ -87,6 +87,7 @@ export type TailwindProps = TailwindContainerProps &
 		whitespace?: string;
 		width?: string;
 		zIndex?: string;
+		variants?: string;
 	};
 
 export type TailwindContainerProps = {

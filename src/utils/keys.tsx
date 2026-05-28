@@ -72,7 +72,6 @@ const tailwindBaseKeys = {
 	space: '',
 	spacing: '',
 	stroke: '',
-	tailwind: '',
 	textDecoration: '',
 	textTransform: '',
 	top: '',
@@ -84,6 +83,8 @@ const tailwindBaseKeys = {
 	whitespace: '',
 	width: '',
 	zIndex: '',
+	variants: '',
+	tailwind: '',
 };
 
 const tailwindContainerKeys = {
