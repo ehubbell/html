@@ -1,38 +1,51 @@
-import { isArray, isEmpty, isObject } from 'src/utils/helpers';
 import { tailwindKeys } from 'src/utils/keys';
 
-export const filterProps = (data, attrs = [], include = true) => {
+const tailwindKeySet = new Set(Object.keys(tailwindKeys));
+const classNameKeySet = new Set([...tailwindKeySet, 'className']);
+
+export const filterProps = (data = {}, attrs = [], include = true) => {
 	const formattedData = {};
-	Object.keys(data)
-		.filter(key => (include ? attrs.includes(key) : !attrs.includes(key)))
-		.map(key => (formattedData[key] = data[key]));
+	const attrSet = new Set(attrs);
+
+	for (const key in data) {
+		if (include ? attrSet.has(key) : !attrSet.has(key)) {
+			formattedData[key] = data[key];
+		}
+	}
+
 	return formattedData;
 };
 
-export const formatProps = props => {
+export const formatProps = (props = {}) => {
 	const formattedData = {};
-	Object.keys(props)
-		.filter((key, i, s) => s.indexOf(key) === i)
-		.filter(key => !Object.keys(tailwindKeys).includes(key))
-		.map(key => (formattedData[key] = props[key]));
+
+	for (const key in props) {
+		if (!tailwindKeySet.has(key)) {
+			formattedData[key] = props[key];
+		}
+	}
+
 	return formattedData;
 };
 
-export const formatClassNames = props => {
+export const formatClassNames = (props = {}, className = '') => {
 	let classes = '';
-	const keys = Object.keys(tailwindKeys);
 
-	Object.keys(props)
-		.filter((key, i, s) => s.indexOf(key) === i)
-		.filter(key => [...keys, 'className'].includes(key))
-		.map(key => {
-			const data = props[key];
-			if (isArray(data)) return;
-			if (isObject(data)) return;
-			if (isEmpty(data)) return;
-			if (typeof data === 'function') return;
-			classes = classes.concat(data + ' ');
-		});
+	for (const key in props) {
+		if (
+			classNameKeySet.has(key) &&
+			typeof props[key] === 'string' &&
+			props[key].length > 0 &&
+			props[key] !== 'undefined'
+		) {
+			classes += props[key] + ' ';
+		}
+	}
+
+	if (typeof className === 'string' && className.length > 0 && className !== 'undefined') {
+		classes += className + ' ';
+	}
+
 	return classes;
 };
 

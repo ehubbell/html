@@ -61,6 +61,7 @@ export type TailwindProps = TailwindContainerProps &
 		padding?: string;
 		path?: string;
 		placeholderColor?: string;
+		pointerEvents?: string;
 		position?: string;
 		ring?: string;
 		ringColor?: string;
@@ -83,7 +84,7 @@ export type TailwindProps = TailwindContainerProps &
 		transition?: string;
 		translate?: string;
 		weight?: TailwindFontWeightOpts;
-		whiteSpace?: string;
+		whitespace?: string;
 		width?: string;
 		zIndex?: string;
 	};

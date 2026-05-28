@@ -26,7 +26,7 @@ export default defineConfig(({ mode }) => ({
 			plugins: [peerDepsExternal()],
 		},
 	},
-	plugins: [runCommand('npm run build:ts'), runSize()],
+	plugins: [runCommand('npm run build:ts'), runSize({})],
 	resolve: {
 		alias: {
 			src: path.resolve(__dirname, '/src'),
