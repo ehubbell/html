@@ -37,6 +37,28 @@ describe('formatClassNames', () => {
 		expect(result).toEqual(`bg-white text-slate-900 ${variants} `);
 	});
 
+	it('includes expanded explicit tailwind family keys', () => {
+		const result = formatClassNames({
+			alignItems: 'items-center',
+			appearance: 'appearance-none',
+			bgRepeat: 'bg-no-repeat',
+			borderWidth: 'border-2',
+			divideStyle: 'divide-dashed',
+			flexDirection: 'flex-col',
+			gridCols: 'grid-cols-3',
+			maxWidth: 'max-w-lg',
+			minWidth: 'min-w-0',
+			objectFit: 'object-cover',
+			textAlign: 'text-center',
+			userSelect: 'select-none',
+			visibility: 'invisible',
+		});
+
+		expect(result).toEqual(
+			'items-center appearance-none bg-no-repeat border-2 divide-dashed flex-col grid-cols-3 max-w-lg min-w-0 object-cover text-center select-none invisible ',
+		);
+	});
+
 	it('ignores unknown keys and non-string values', () => {
 		const result = formatClassNames({
 			bgColor: 'bg-blue-500',
@@ -63,6 +85,8 @@ describe('formatProps', () => {
 			'data-id': '123',
 			disabled: true,
 			onClick,
+			maxWidth: 'max-w-md',
+			minWidth: 'min-w-0',
 			spacing: 'px-3',
 			variants: 'hover:bg-slate-50 data-[state=open]:block',
 			whitespace: 'whitespace-nowrap',
@@ -89,8 +113,11 @@ describe('formatElementProps', () => {
 				className: 'props-class',
 				'data-id': 'panel',
 				disabled: true,
+				divideStyle: 'divide-solid',
 				id: 'panel',
 				onClick,
+				maxWidth: 'max-w-sm',
+				minWidth: 'min-w-0',
 				spacing: 'p-2',
 				style,
 			},
@@ -102,7 +129,7 @@ describe('formatElementProps', () => {
 		);
 
 		expect(result.className).toEqual(
-			'bg-blue-500 props-class p-2 hover:bg-blue-600 data-[state=open]:block custom-class ',
+			'bg-blue-500 props-class divide-solid max-w-sm min-w-0 p-2 hover:bg-blue-600 data-[state=open]:block custom-class ',
 		);
 		expect(result.props).toEqual({
 			'aria-label': 'Open',
@@ -189,6 +216,9 @@ describe('html primitives', () => {
 		const element = Button({
 			children: 'Save',
 			disabled: true,
+			divideStyle: 'divide-dashed',
+			maxWidth: 'max-w-xs',
+			minWidth: 'min-w-0',
 			type: 'submit',
 			width: 'w-full',
 		} as any);
@@ -197,10 +227,13 @@ describe('html primitives', () => {
 		expect(element.props).toMatchObject({
 			'data-name': 'Button',
 			children: 'Save',
-			className: 'w-full ',
+			className: 'divide-dashed max-w-xs min-w-0 w-full ',
 			disabled: true,
 			type: 'submit',
 		});
+		expect(element.props.divideStyle).toBeUndefined();
+		expect(element.props.maxWidth).toBeUndefined();
+		expect(element.props.minWidth).toBeUndefined();
 		expect(element.props.width).toBeUndefined();
 	});
 });
